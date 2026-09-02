@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="Presentonika P1">
+  <description>WordPress Coding Standards for code added during P1.</description>
+  <arg name="basepath" value="."/>
+  <arg name="colors"/>
+  <arg value="ps"/>
+  <config name="ignore_warnings_on_exit" value="1"/>
+  <file>plugins/core/includes/storage-yandex.php</file>
+  <file>plugins/vk-id-auth/includes/account-linking.php</file>
+  <rule ref="WordPress-Core"/>
+  <rule ref="WordPress-Extra"/>
+  <rule ref="Generic.Files.LineLength">
+    <properties>
+      <property name="lineLimit" value="120"/>
+      <property name="absoluteLineLimit" value="160"/>
+    </properties>
+  </rule>
+  <exclude-pattern>vendor/*</exclude-pattern>
+</ruleset>
